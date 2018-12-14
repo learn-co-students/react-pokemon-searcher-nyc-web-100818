@@ -38,7 +38,7 @@ class PokemonPage extends React.Component {
           showNoResults={false}
         />
         <br />
-        <PokemonCollection />
+        <PokemonCollection pokemon={this.state.pokemon} />
         <br />
         <PokemonForm />
       </div>
