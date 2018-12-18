@@ -1,6 +1,26 @@
 {
   "pokemon": [
     {
+      "name": "bulbasaur",
+      "stats": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        {
+          "value": "40",
+          "name": "hp"
+        }
+      ],
+      "sprites": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+      },
+      "flipped": false,
+      "id": 1
+    },
+    {
       "height": 10,
       "weight": 130,
       "id": 2,
@@ -7326,23 +7346,6 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
         "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/151.png"
       }
-    },
-    {
-      "name": "bulbasaur",
-      "stats": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        "40"
-      ],
-      "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
-      },
-      "flipped": false,
-      "id": 207
     }
   ]
 }

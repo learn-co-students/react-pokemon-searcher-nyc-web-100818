@@ -9,8 +9,7 @@ class PokemonPage extends React.Component {
 
   state = {
     pokeData: [],
-    term: '',
-    filteredPokemon: []
+    term: ''
   }
   
   componentDidMount() {

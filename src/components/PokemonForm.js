@@ -28,7 +28,10 @@ class PokemonForm extends React.Component {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         name: this.state.name,
-        stats: [0, 1, 2, 3, 4, this.state.hp],
+        stats: [0, 1, 2, 3, 4, {
+          "value": this.state.hp,
+          "name": "hp"
+        }],
         sprites: {
           front: this.state.frontUrl,
           back: this.state.backUrl
