@@ -2,10 +2,18 @@ import React from 'react'
 import PokemonIndex from './components/PokemonIndex'
 import './App.css'
 
-const App = () => (
-  <div className="App">
-    <PokemonIndex />
-  </div>
-)
+
+/// NOTE: CHANGED FROM FCN TO PURE COMPONENT
+
+class App extends React.PureComponent{
+    render(){
+      return(
+        <div className="App">
+        <PokemonIndex />
+        </div>
+      )
+
+    }
+}
 
 export default App
