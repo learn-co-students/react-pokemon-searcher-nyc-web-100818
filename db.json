@@ -7328,14 +7328,22 @@
       }
     },
     {
+<<<<<<< HEAD
       "name": "bulbasaur",
       "stats": [
         {
           "value": "18503562382",
+=======
+      "name": "new mew",
+      "stats": [
+        {
+          "value": "10000000000",
+>>>>>>> mybranch
           "name": "hp"
         }
       ],
       "sprites": {
+<<<<<<< HEAD
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
       },
@@ -7382,6 +7390,12 @@
         "back": ""
       },
       "id": 210
+=======
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/150.png"
+      },
+      "id": 207
+>>>>>>> mybranch
     }
   ]
 }
