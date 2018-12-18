@@ -7328,60 +7328,18 @@
       }
     },
     {
-      "name": "bulbasaur",
+      "name": "new mew",
       "stats": [
         {
-          "value": "18503562382",
+          "value": "10000000000",
           "name": "hp"
         }
       ],
       "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/150.png"
       },
       "id": 207
-    },
-    {
-      "name": "Alan",
-      "stats": [
-        {
-          "value": "1",
-          "name": "hp"
-        }
-      ],
-      "sprites": {
-        "front": "https://github.com/Xiupan",
-        "back": ""
-      },
-      "id": 208
-    },
-    {
-      "name": "Alan",
-      "stats": [
-        {
-          "value": "1",
-          "name": "hp"
-        }
-      ],
-      "sprites": {
-        "front": "https://avatars0.githubusercontent.com/u/13387775?s=60&v=4",
-        "back": ""
-      },
-      "id": 209
-    },
-    {
-      "name": "Alan",
-      "stats": [
-        {
-          "value": "1",
-          "name": "hp"
-        }
-      ],
-      "sprites": {
-        "front": "https://avatars0.githubusercontent.com/u/13387775?s=60&v=4",
-        "back": ""
-      },
-      "id": 210
     }
   ]
 }

@@ -2,24 +2,29 @@ import React from "react";
 import { Card } from "semantic-ui-react";
 
 class PokemonCard extends React.Component {
-  findHpOfPokemon = () => {
-    return this.props.pokemon.stats.find(stat => stat.name === "hp").value;
-  };
+  handleClick = (event) => {
+    // debugger
+    event.target.src === this.props.frontPic ? event.target.src = this.props.backPic : event.target.src = this.props.frontPic
+  }
 
   render() {
+    // console.log("POKECARD:",this.props);
     return (
       <Card>
         <div>
-          <div className="image">
-            <img alt="oh no!" src={this.props.pokemon.sprites.front} />
+
+          <div onClick={(event)=> this.handleClick(event)} className="image">
+            <img alt="oh no!" src={this.props.frontPic}/>
           </div>
           <div className="content">
-            <div className="header">{this.props.pokemon.name}</div>
+            <div className="header">{this.props.name}</div>
           </div>
           <div className="extra content">
             <span>
               <i className="icon heartbeat red" />
-              {this.findHpOfPokemon()}
+
+              {this.props.hp}
+
             </span>
           </div>
         </div>

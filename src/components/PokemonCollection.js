@@ -3,18 +3,25 @@ import PokemonCard from "./PokemonCard";
 import { Card } from "semantic-ui-react";
 
 class PokemonCollection extends React.Component {
-  renderPocketMonsters = () => {
-    let mappedPokemon = this.props.pokemon;
-    return mappedPokemon.map(pokemon => {
-      return <PokemonCard pokemon={pokemon} key={pokemon.id} />;
-    });
-  };
+    pokemonDetail = () => {
+      return this.props.pokedex.map((p) =>{
+        let indexPO = p.stats.indexOf("hp")
+        let stats = p.stats.slice(indexPO)
+        let hp = stats[0].value
+ // ALTERNATIVE WAY TO FIND HP:
+        // let hpStat = p.stats.find(stat => stat["name"] === "hp") // {name: "hp", value: 60}
+        // let hp = hpStat.value
+         return <PokemonCard key={p.id} name={p.name} frontPic={p.sprites.front} backPic={p.sprites.back} hp={hp} />
+      })
+    }
+
 
   render() {
+    console.log("props are: ", this.props);
     return (
       <Card.Group itemsPerRow={6}>
-        <h1>Hello From Pokemon Collection</h1>
-        {this.renderPocketMonsters()}
+        <br/>
+        {this.pokemonDetail()}
       </Card.Group>
     );
   }
