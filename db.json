@@ -1,6 +1,21 @@
 {
   "pokemon": [
     {
+      "name": "bulbasaur",
+      "id": 1,
+      "stats": [
+        {
+          "value": "41",
+          "name": "hp"
+        }
+      ],
+      "sprites": {
+        "front": "https://cdn.bulbagarden.net/upload/7/76/Spr_5b_001.png",
+        "back": "https://cdn.bulbagarden.net/upload/e/e9/Spr_b_5b_001.png"
+      },
+      "id": 207
+    },
+    {
       "height": 10,
       "weight": 130,
       "id": 2,
