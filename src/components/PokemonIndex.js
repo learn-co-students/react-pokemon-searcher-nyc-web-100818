@@ -5,27 +5,38 @@ import { Search } from "semantic-ui-react";
 import _ from "lodash";
 const URL = "http://localhost:3000/pokemon";
 
+const API = "http://localhost:3000/pokemon/"
+
 class PokemonPage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      pokemon: []
-    };
+
+  state = {
+    pokemon: [],
+    term: ""
   }
 
   componentDidMount() {
-    this.fetchPokemon();
+    fetch(API)
+    .then(resp => resp.json())
+    .then(pokeData => this.setState(
+      { pokemon: pokeData }
+    ))
   }
 
-  fetchPokemon = () => {
-    fetch(URL)
-      .then(res => res.json())
-      .then(pokemonCollection =>
-        this.setState({
-          pokemon: pokemonCollection
-        })
-      );
-  };
+  handleSearch = (event) => {
+    this.setState({
+      term: event.target.value
+    })
+  }
+
+  filteredPokemon = () => {
+    return this.state.pokemon.filter(poke => poke.name.includes(this.state.term));
+  }
+
+  addPokemon = (newPoke) => {
+    this.setState({
+      pokemon: [...this.state.pokemon, newPoke]
+    })
+  }
 
   render() {
     console.log("this is the state of pokemon", this.state.pokemon);
@@ -33,14 +44,11 @@ class PokemonPage extends React.Component {
       <div>
         <h1>Pokemon Searcher</h1>
         <br />
-        <Search
-          onSearchChange={_.debounce(() => console.log("🤔"), 500)}
-          showNoResults={false}
-        />
+        <Search onSearchChange={this.handleSearch} showNoResults={false} value={this.state.term} />
         <br />
-        <PokemonCollection pokemon={this.state.pokemon} />
+        <PokemonCollection pokemon={this.filteredPokemon()} />
         <br />
-        <PokemonForm />
+        <PokemonForm addPokemon={this.addPokemon} />
       </div>
     );
   }
