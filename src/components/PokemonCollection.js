@@ -2,22 +2,20 @@ import React from "react";
 import PokemonCard from "./PokemonCard";
 import { Card } from "semantic-ui-react";
 
-class PokemonCollection extends React.Component {
-  renderPocketMonsters = () => {
-    let mappedPokemon = this.props.pokemon;
-    return mappedPokemon.map(pokemon => {
-      return <PokemonCard pokemon={pokemon} key={pokemon.id} />;
-    });
-  };
+// PokemonCollection component is presentational and responsible solely for rendering a list of pokemons
+// We can turn this into a functional component for cleaner code
+// Takes in two arguments pokemon and toggleImage as props
 
-  render() {
-    return (
-      <Card.Group itemsPerRow={6}>
-        <h1>Hello From Pokemon Collection</h1>
-        {this.renderPocketMonsters()}
-      </Card.Group>
-    );
-  }
-}
+const PokemonCollection = ({ pokemon, toggleImage }) => (
+  <Card.Group itemsPerRow={6}>
+    {pokemon.map(pokemon => (
+      <PokemonCard
+        key={pokemon.id}
+        pokemon={pokemon}
+        toggleImage={toggleImage}
+      />
+    ))}
+  </Card.Group>
+);
 
 export default PokemonCollection;
